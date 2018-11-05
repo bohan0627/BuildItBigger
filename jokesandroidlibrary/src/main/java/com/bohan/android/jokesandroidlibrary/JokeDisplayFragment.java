@@ -1,6 +1,5 @@
 package com.bohan.android.jokesandroidlibrary;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,28 +13,17 @@ import android.widget.TextView;
 public class JokeDisplayFragment extends Fragment {
 
     public JokeDisplayFragment() {
-        // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_jokes_display, container, false);
-        Intent i = getActivity().getIntent();
-        /*
-        String joke = i.getStringExtra("jokes");
-
-        TextView textView = v.findViewById(R.id.jokes_text_view);
-        textView.setText(joke);
-
-        */
-        String gce_result = getActivity().getIntent().getStringExtra("gce_result");
-        TextView gce_result_show = (TextView) v.findViewById(R.id.jokes_text_view);
-        gce_result_show.setText(gce_result);
-
-        return v;
+        View view = inflater.inflate(R.layout.fragment_jokes_display, container, false);
+        String result = getActivity().getIntent().getStringExtra("result");
+        //System.out.println("result is: " + result);
+        TextView result_show = (TextView) view.findViewById(R.id.jokes_text_view);
+        result_show.setText(result);
+        return view;
     }
 
 }

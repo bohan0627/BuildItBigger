@@ -4,14 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JokeDisplayFragment">
-
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:padding="10dp"
         android:layout_centerInParent="true"
         android:id="@+id/jokes_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment" />
+        android:textSize="@dimen/text_size"
+        android:text="@string/hello_joke"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
 
 </RelativeLayout>
